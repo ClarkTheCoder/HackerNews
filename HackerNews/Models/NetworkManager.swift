@@ -12,7 +12,7 @@ class NetworkManager: ObservableObject {
     
     // specifies which properties any other party can access
     // similar to RSS feeds, if you subscribe to this post, you'll be able to hear from it when contents change
-    @Published var post = [Post]()
+    @Published var posts = [Post]()
     
     func fetchData() {
         if let url = URL(string: "http://hn.algolia.com/api/v1/search?tags=front_page") {
@@ -24,7 +24,7 @@ class NetworkManager: ObservableObject {
                     if let safeData = data {
                         do {
                             let results = try decoder.decode(Results.self, from: safeData)
-                            self.post = results.hits
+                            self.posts = results.hits
                         } catch {
                             print(error)
                         }

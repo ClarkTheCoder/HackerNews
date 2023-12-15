@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var networkManager = NetworkManager()
+    
     var body: some View {
         NavigationView {
             VStack {
-                List(posts, rowContent: { post in
+                List(networkManager.posts, { post in
                     Text(post.title)
                 })
             }
@@ -20,7 +23,7 @@ struct ContentView: View {
        
     }
 }
-
+    
 #Preview {
     ContentView()
 }

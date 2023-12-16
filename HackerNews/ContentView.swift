@@ -14,12 +14,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(networkManager.posts, { post in
+                List(networkManager.posts, rowContent: { post in
                     Text(post.title)
                 })
             }
             .navigationBarTitle("Hacker News")
-        }
+            
+        }.onAppear(perform: {
+            networkManager.fetchData()
+        })
        
     }
 }

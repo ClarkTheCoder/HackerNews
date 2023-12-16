@@ -27,6 +27,7 @@ class NetworkManager: ObservableObject {
                             // dispatchqueue is resonsible for updating posts property in UI
                             DispatchQueue.main.async{
                                 self.posts = results.hits
+                                print(results.hits)
                             }
                         } catch {
                             print(error)

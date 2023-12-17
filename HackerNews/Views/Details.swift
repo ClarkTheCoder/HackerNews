@@ -14,7 +14,7 @@ struct Details: View {
     let url: String?
     
     var body: some View {
-        WebView(urlString: <#T##String?#>)
+        WebView(urlString: url)
     }
 }
 
@@ -24,14 +24,21 @@ struct Details: View {
 
 // allows us to create a swiftUI view that represents UIKitView
 struct WebView: UIViewRepresentable {
-    // attempts to create a UIKit WebView
     
     let urlString: String?
-    func makeUIView(context: Context) -> some UIView {
+    
+    // attempts to create a UIKit WebView
+    func makeUIView(context: Context) -> WebView.UIViewType {
         return WKWebView()
     }
      
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        <#code#>
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        // checks to see urlString is nil, if not assigns it to safeString
+        if let safeString = urlString {
+            if let url = URL(string: safeString){
+                let request = URLRequest(url: url)
+                uiView.load(request)
+            }
+        }
     }
 }

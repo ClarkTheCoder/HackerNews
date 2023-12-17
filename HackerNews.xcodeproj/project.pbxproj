@@ -14,6 +14,7 @@
 		B542016E2B2BB6C0009E4362 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B542016D2B2BB6C0009E4362 /* ContentView.swift */; };
 		B54201702B2BB6C1009E4362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B542016F2B2BB6C1009E4362 /* Assets.xcassets */; };
 		B54201732B2BB6C1009E4362 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54201722B2BB6C1009E4362 /* Preview Assets.xcassets */; };
+		B5E47BD52B2EE3A4004F3D2D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E47BD42B2EE3A4004F3D2D /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B542016D2B2BB6C0009E4362 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B542016F2B2BB6C1009E4362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B54201722B2BB6C1009E4362 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5E47BD42B2EE3A4004F3D2D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			children = (
 				B542016D2B2BB6C0009E4362 /* ContentView.swift */,
 				67441B372B2E682D00C7C9B6 /* Details.swift */,
+				B5E47BD42B2EE3A4004F3D2D /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				67F89BD22B2C5128004AE9FD /* NetworkManager.swift in Sources */,
 				67441B382B2E682D00C7C9B6 /* Details.swift in Sources */,
 				67F89BD42B2C5512004AE9FD /* PostData.swift in Sources */,
+				B5E47BD52B2EE3A4004F3D2D /* WebView.swift in Sources */,
 				B542016E2B2BB6C0009E4362 /* ContentView.swift in Sources */,
 				B542016C2B2BB6C0009E4362 /* HackerNewsApp.swift in Sources */,
 			);

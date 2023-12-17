@@ -21,24 +21,3 @@ struct Details: View {
 #Preview {
     Details(url: "https://google.ca")
 }
-
-// allows us to create a swiftUI view that represents UIKitView
-struct WebView: UIViewRepresentable {
-    
-    let urlString: String?
-    
-    // attempts to create a UIKit WebView
-    func makeUIView(context: Context) -> WebView.UIViewType {
-        return WKWebView()
-    }
-     
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        // checks to see urlString is nil, if not assigns it to safeString
-        if let safeString = urlString {
-            if let url = URL(string: safeString){
-                let request = URLRequest(url: url)
-                uiView.load(request)
-            }
-        }
-    }
-}

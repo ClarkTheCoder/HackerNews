@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // used to update posts property
     @ObservedObject var networkManager = NetworkManager()
     
     var body: some View {
